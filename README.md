@@ -1,8 +1,4 @@
----
-tags:
-languages:
-resources:
----
+
 # Ruby Baby
 
 ## Outline
