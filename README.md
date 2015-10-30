@@ -15,12 +15,35 @@ You need to write a program that stores each new puppy that is born. You will wr
 
 Code your solution in `lib/dog.rb`
 
-This lab is primarily test-driven. Run the test suite with the `learn` command and follow the test output to get started. 
+This lab is primarily test-driven. Run the test suite with the `learn` command and follow the test output to get started.
 
-A few things to keep in mind:
+Some guidelines: 
 
-* You'll need to set a class variable equal to an empty array inside your class. We suggest calling that variable `@@all`. 
+* You'll need to set a class variable equal to an empty array inside your class. Call your class variable `@@all`.  
 * This array is the storage container for each instance of a `Dog` that gets created. In other words, every puppy that is born should get pushed into this array at the moment of instantiation––in the `#initialize` method! Use the `self` keyword inside the `#initialize` method to refer to the new dog you are trying to store in your `@@all` array. 
 * You will need to write a class method, `.all`, that iterates over all of the individual dogs stored in the `@@all` array and `puts` out their name to the terminal. 
 
+There is one method that we'll talk about togher:
 
+### The `.clear_all` Method
+
+What happens if we want to clear out our list of existing dogs? It is not at all uncommon to want to "reset" or "restart" our program. You'll be building a class method, `.clear_all`, that does just that. This method should operate on the `@@all` array of existing dogs and empty that array. **Hint:** look up the `Array#clear` method. 
+
+**Important:** Our test suite uses the `Dog.clear_all` method to empty the `@@all` array of dogs after each tests. Consequently, you'll need to write this method and get the `.clear_all` test passing in order for your other tests to run properly. Here is the order in which you should tackle this assignment:
+
+* Step 1: define the class
+* Step 2: define your `@@all` class variable to be equal to an empty array
+* Step 3: define the initialize method (look at the test of `#new`)
+* Step 4: define the `.clear_all` class method. 
+
+From there, you can proceed to solve the tests as you are guided by the test output and the guidelines above.
+
+### A Note on Testing
+
+In the test suite, you'll see this code:
+
+```ruby
+expect(Dog.class_variable_get(:@@all)).to match([])
+``` 
+
+Here, we are using the `.class_variable_get(name_of_class_variable)` method on the `Dog` class. This method introspects on the class on which it is called and retrieves the value of the class variable passed into the method as an argument. We use it here in the test suite to check that you do in fact set a class variable, `@@all`, equal to an empty array and that you fill that array up with new dogs as they are instantiated. 
