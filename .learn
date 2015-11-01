@@ -1,5 +1,8 @@
 tags:
-  - tag1
-languages:
-  - language1
-resources: 0
+  - class variables
+  - class methods
+  - object remembrance
+languages: 
+  - Ruby
+resources:
+  - 0
