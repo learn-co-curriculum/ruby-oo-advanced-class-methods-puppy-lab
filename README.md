@@ -38,3 +38,5 @@ expect(Dog.class_variable_get(:@@all)).to match([])
 ``` 
 
 Here, we are using the `.class_variable_get(name_of_class_variable)` method on the `Dog` class. This method introspects on the class on which it is called and retrieves the value of the class variable passed into the method as an argument. We use it here in the test suite to check that you do in fact set a class variable, `@@all`, equal to an empty array and that you fill that array up with new dogs as they are instantiated. 
+
+<a href='https://learn.co/lessons/ruby-puppy' data-visibility='hidden'>View this lesson on Learn.co</a>
