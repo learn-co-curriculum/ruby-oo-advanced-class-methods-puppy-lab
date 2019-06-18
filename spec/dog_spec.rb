@@ -1,5 +1,6 @@
 require "spec_helper"
 
+
 describe "Dog" do
 
   let!(:pluto) { Dog.new("Pluto") }
@@ -16,6 +17,12 @@ describe "Dog" do
     end
   end
 
+  describe ".all" do
+    it "is a class method returns all dog instances" do
+      expect(Dog.all).to match([pluto,fido,maddy])
+    end
+  end
+
   describe ".clear_all" do
     it "is a class method that empties the @@all array of all existing dogs" do
       Dog.clear_all
@@ -23,9 +30,9 @@ describe "Dog" do
     end
   end
 
-  describe ".all" do
+  describe ".print_all" do
     it "is a class method that puts out the name of each dog to the terminal" do
-      expect{Dog.all}.to output("Pluto\nFido\nMaddy\n").to_stdout
+      expect{Dog.print_all}.to output("Pluto\nFido\nMaddy\n").to_stdout
     end
   end
 
