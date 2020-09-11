@@ -22,7 +22,7 @@ instance of `Dog` that is instantiated.
 ## Instructions
 
 Code your solution in `lib/dog.rb`, using the test error messages from running
-`learn` as a guide to your solution.
+`learn test` as a guide to your solution.
 
 - Create a class variable `@@all` set to an empty array inside your class. This
   array is the storage container for each instance of a `Dog` that gets
