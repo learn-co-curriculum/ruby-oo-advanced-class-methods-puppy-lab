@@ -1,4 +1,4 @@
-# Ruby Remembrance Lab
+# Puppy Lab - Remembering Class Instances
 
 ## Learning Goals
 
