@@ -40,9 +40,9 @@ Code your solution in `lib/dog.rb`, using the test error messages from running
   the individual dogs stored in the `@@all` array and `puts` out their name to the
   terminal.
 
-- Now that we've gotten these methods written out, it is time do a bit of
+- Now that we've gotten these methods written out, it is time to do a bit of
   refactoring. Rather than pushing `self` into the `@@all` variable inside of
-  `#initialize`, we're extract this action into its own method. Call this method
+  `#initialize`, let's extract this action into its own method. Call this method
   `#save`. The method should handle the task of pushing `self` into `@@all`.
   Once written, update your code in `#initialize` so that it uses `#save`.
 
