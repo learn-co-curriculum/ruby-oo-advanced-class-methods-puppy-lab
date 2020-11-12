@@ -1,4 +1,4 @@
-# Puppy Lab - Remembering Class Instances
+# Puppy Lab
 
 ## Learning Goals
 
